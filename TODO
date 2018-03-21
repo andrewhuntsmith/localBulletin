@@ -1,0 +1,50 @@
+Overview: what does the app need to do
+
+-Determine user's location, match them to appropriate board
+  -Get location
+
+-Allow users to make a text post, and choose location on board to post
+  -Eventually upgrade to allow images
+  -Give user ability to write text
+  -Turn text into image
+
+-Make database of boards
+  -Start with one global board, work from there
+  -Store boards as images
+  -Make a database that can store an image
+  -Access the database to get that image
+  -I guess first just make the board just a text wall and deal with images later
+  -so first make an app that lets users access a database and add to the text stored there
+
+
+
+Some psuedo code:
+
+//show the board, allow user to make a new post
+appMain() {
+  showBoard();
+  if(newPostButton.clicked()) {
+    makeNewPost();
+  }
+}
+
+
+//give the user a keyboard, allow them to type a post to send to database
+makeNewPost() {
+  makeTextBox();
+  makePostButton(); // sends text to database
+  return;
+}
+
+
+//send text to database, put in queue of updates, append text to text wall
+uploadPost(string text) {
+  database.write(text);
+}
+
+
+//take text from database, print to board
+showBoard() {
+  string text = database.read(boardText);
+  print(text);
+}
