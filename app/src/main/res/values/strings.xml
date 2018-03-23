@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Local Bulletin</string>
+    <string name="button_update">Update</string>
 </resources>
