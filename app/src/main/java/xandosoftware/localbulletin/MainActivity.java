@@ -2,6 +2,7 @@ package xandosoftware.localbulletin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,11 +23,13 @@ public class MainActivity extends AppCompatActivity {
         boardText = boardText + " How are you?";
         mainText.setText(boardText);
 
+        mainText.setMovementMethod(new ScrollingMovementMethod());
+
         final Button updateButton = (Button) findViewById(R.id.updateButtonId);
         updateButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 EditText postText = (EditText) findViewById(R.id.postTextId);
-                boardText = boardText + postText.getText();
+                boardText = boardText + "\n" + postText.getText();
                 mainText.setText(boardText);
             }
         } );

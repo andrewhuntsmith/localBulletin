@@ -10,13 +10,16 @@
         android:id="@+id/mainText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+        android:text="@string/initial_board_text"
         android:textSize="18sp"
+        android:gravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14999998" />
+        app:layout_constraintVertical_bias="0.050000012" />
 
     <Button
         android:id="@+id/updateButtonId"
@@ -36,16 +39,17 @@
 
     <EditText
         android:id="@+id/postTextId"
-        android:layout_width="88dp"
+        android:layout_width="240dp"
         android:layout_height="38dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
+        android:hint="@string/post_text_hint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.63" />
+        app:layout_constraintVertical_bias="0.82" />
 
 </android.support.constraint.ConstraintLayout>
